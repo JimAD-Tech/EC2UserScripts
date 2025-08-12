@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo yum update -y
 sudo yum install wget tree git -y
-sudo yum install java-11-amazon-corretto -y
-#sudo amazon-linux-extras install java-openjdk11
+sudo yum install java-21-amazon-corretto -y
+#sudo amazon-linux-extras install java-openjdk21
 #sudo yum install java-1.8.0-openjdk
 sudo rm -rf /opt/maven*
 sudo wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.tar.gz -P /tmp
@@ -13,7 +13,7 @@ sudo touch  /etc/profile.d/maven.sh
 
 echo '''# Apache Maven Environmental Variables
 # MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
-export JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto.x86_64/
+export JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64/
 export M2_HOME=/opt/maven/
 export MAVEN_HOME=/opt/maven/
 export PATH=${M2_HOME}/bin:${PATH}:${JAVA_HOME}''' | sudo tee /etc/profile.d/maven.sh > /dev/null

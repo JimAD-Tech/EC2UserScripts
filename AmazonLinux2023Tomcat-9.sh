@@ -1,13 +1,13 @@
 #!/bin/bash
 sudo yum update -y
 sudo yum install wget tree git -y
-sudo yum install java-11-amazon-corretto -y
+sudo yum install java-21-amazon-corretto -y
 #sudo useradd -m -U -d /opt/tomcat tomcat
 
 cd /tmp
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.75/bin/apache-tomcat-9.0.75.tar.gz
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.108/bin/apache-tomcat-9.0.108.tar.gz
 sudo tar xzvf apache-tomcat-9*tar.gz -C /opt
-sudo mv /opt/apache-tomcat-9.0.75 /opt/tomcat
+sudo mv /opt/apache-tomcat-9.0.108 /opt/tomcat
 sudo chown -R ec2-user:ec2-user /opt/tomcat
 
 sudo find /opt/tomcat/bin -name "*.sh" -exec sudo chmod 775 {} \;
@@ -25,7 +25,7 @@ RemainAfterExit=yes
 User=ec2-user
 Group=ec2-user
 
-Environment="/usr/lib/jvm/java-11-amazon-corretto.x86_64/"
+Environment="/usr/lib/jvm/java-21-amazon-corretto.x86_64/"
 Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom -Djava.awt.headless=true"
 Environment="CATALINA_BASE=/opt/tomcat"
 Environment="CATALINA_HOME=/opt/tomcat"

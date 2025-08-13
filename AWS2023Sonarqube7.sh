@@ -4,14 +4,14 @@ sudo yum install wget tree git -y
 cd /opt
 sudo yum install java-17-amazon-corretto -y
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.8.100196.zip
-sudo unzip sonarqube-9.9.8.zip
+sudo unzip sonarqube-9.9.zip
 sudo useradd sonar
 
 echo 'sonar ALL=(ALL) NOPASSWD:ALL' | EDITOR='tee -a'  visudo
 
-sudo chown -R sonar:sonar /opt/sonarqube-9.9.8/
-sudo chmod 755 /opt/sonarqube-9.9.8
-sudo ln -s /opt/sonarqube-9.9.8 /opt/sonarqube
+sudo chown -R sonar:sonar /opt/sonarqube-9.9/
+sudo chmod 755 /opt/sonarqube-9.9
+sudo ln -s /opt/sonarqube-9.9 /opt/sonarqube
 
 echo '''vm.max_map_count=524288
 fs.file-max=131072

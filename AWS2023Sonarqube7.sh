@@ -3,7 +3,7 @@ sudo yum update -y
 sudo yum install wget tree git -y
 cd /opt
 sudo yum install java-17-amazon-corretto -y
-wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.8.100196.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.8.100196.zip?_gl=1*142qtjy*_gcl_au*MjczMjkwMDU2LjE3NTE5MjEyMzM.*_ga*NzM5MTA2OTM4LjE3NTE5MjEyMzI.*_ga_9JZ0GZ5TC6*czE3NTUxMjUxMTEkbzgkZzEkdDE3NTUxMjY2MzQkajYwJGwwJGgw
 sudo unzip sonarqube-9.9.zip
 sudo useradd sonar
 

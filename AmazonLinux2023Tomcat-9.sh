@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo yum update -y
 sudo yum install wget tree git -y
-sudo yum install java-21-amazon-corretto -y
+sudo yum install java-17-amazon-corretto -y
 #sudo useradd -m -U -d /opt/tomcat tomcat
 
 cd /tmp
@@ -25,7 +25,7 @@ RemainAfterExit=yes
 User=ec2-user
 Group=ec2-user
 
-Environment="/usr/lib/jvm/java-21-amazon-corretto.x86_64/"
+Environment="/usr/lib/jvm/java-17-amazon-corretto.x86_64/"
 Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom -Djava.awt.headless=true"
 Environment="CATALINA_BASE=/opt/tomcat"
 Environment="CATALINA_HOME=/opt/tomcat"
